@@ -1,0 +1,9 @@
+<In Ubuntu>
+kops create cluster kops.jadonharsh.xyz --state=s3://harsh-kops-state --zones=us-east-1a,us-east-1b --node-count=2 --node-size=t3.small --master-size=t3.medium --dns-zone=kops.jadonharsh.xyz --node-volume-size=8 --master-volume-size=8
+
+<Start Clusture>
+kops update cluster --name kops.jadonharsh.xyz --state=s3://harsh-kops-state --admin --yes
+<Delete Clusture>
+kops delete cluster --name=kops.jadonharsh.xyz --state=s3://harsh-kops-state --yes
+<Validate>
+kops validate cluster --state=s3://harsh-kops-state

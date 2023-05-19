@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vproapp
+spec:
+  containers:
+  - name: appcontainer
+    image: jadonharsh/vprofileapp
+    ports:
+    - containerPort: 8080
